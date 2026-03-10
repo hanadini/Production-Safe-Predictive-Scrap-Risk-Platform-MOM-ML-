@@ -78,7 +78,7 @@ The platform follows a **service-oriented architecture** separating prediction, 
 | **Swagger / REST API** | Interface for submitting risk evaluation requests |
 
 
-![System Architecture](docs/System_Architecture.png)
+![System Architecture](docs/System Architecture.png)
 
 *Figure: High-level architecture of the predictive MOM governance platform*
 ---
