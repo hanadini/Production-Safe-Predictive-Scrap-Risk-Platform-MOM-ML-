@@ -77,7 +77,9 @@ The platform follows a **service-oriented architecture** separating prediction, 
 | **PostgreSQL** | Stores state, events, tasks, and prediction logs |
 | **Swagger / REST API** | Interface for submitting risk evaluation requests |
 
-<img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/884cf850-f252-40b0-abad-2ca529918154" />
+
+![System Architecture](docs/System_Architecture.png)
+
 *Figure: High-level architecture of the predictive MOM governance platform*
 ---
 
@@ -97,11 +99,30 @@ The platform follows a **service-oriented architecture** separating prediction, 
    - MOM events
    - operational tasks
 
+
+---
+
+# Prediction Evaluation Flow
+
+The following diagram shows how prediction requests move through the system and how operational actions are generated.
+
+![Prediction Evaluation Flow](docs/PredictionEvaluation.png)
+
+The flow demonstrates how machine learning predictions are converted into controlled MOM actions:
+
+1. Client sends a risk evaluation request
+2. MOM Orchestrator forwards features to the ML inference service
+3. The ML model returns scrap risk probability
+4. Decision Engine evaluates prediction using operational rules
+5. The system stores prediction logs
+6. If risk thresholds are exceeded, MOM events or operational tasks are created
 ---
 
 # Decision Engine Logic
 
 Predictions from the ML service are evaluated by a governance layer before triggering operational actions.
+
+![Decision State Machine](docs/DecisionStateMachine.png)
 
 The Decision Engine implements:
 
@@ -112,7 +133,7 @@ The Decision Engine implements:
 - **Fallback behavior**
 
 Example state transitions:
-'NORMAL → WARNING → ESCALATED'
+NORMAL → WARNING → ESCALATED
 
 
 Escalation only occurs when **multiple consecutive risk signals** are detected.
@@ -149,6 +170,27 @@ This reduces false alarms caused by noisy sensor data.
 - Persistency Counters
 - Service-Oriented Architecture
 
+
+---
+
+# Deployment Architecture
+
+The platform is designed for containerized deployment using Docker Compose.
+
+![Docker Deployment Architecture](docs/dockerDeployment.png)
+
+Deployment includes three main services:
+
+- **MOM Service (Spring Boot)**  
+  Handles orchestration, decision engine logic, and REST APIs.
+
+- **ML Inference Service (FastAPI)**  
+  Provides machine learning predictions through a REST interface.
+
+- **PostgreSQL Database**  
+  Stores system state, prediction logs, events, and tasks.
+
+Docker Compose allows the entire platform to be deployed consistently across environments.
 ---
 
 # Key Features
