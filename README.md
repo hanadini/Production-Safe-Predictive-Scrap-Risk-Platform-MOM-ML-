@@ -11,6 +11,7 @@ A prototype architecture demonstrating how **machine learning predictions can be
 The platform predicts **scrap risk in advance** and converts model predictions into **controlled operational actions** such as events, alerts, and workflow tasks.
 
 This project demonstrates how machine learning predictions can be integrated safely into industrial MOM environments by introducing governance, traceability, and workflow integration.
+
 ---
 
 # Highlights
