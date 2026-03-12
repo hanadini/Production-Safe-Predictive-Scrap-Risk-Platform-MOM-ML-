@@ -5,7 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a33c1d1-b503-4031-97a8-215e2ba20cdd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MLService/init" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/DecisionStateMachine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/PredictionEvaluation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/System Architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/dockerDeployment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/MomServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/api/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/api/PredictionLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/api/RiskEvaluationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/api/RiskStateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/api/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/config/DecisionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/config/MlClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/ActionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/DecisionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/DecisionEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/DecisionResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/EngineState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/InMemoryThresholdPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/Persistency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/RiskState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/ThresholdPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/decision/Thresholds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/domain/LineConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/domain/MomEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/domain/MomTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/domain/PredictionLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/domain/RiskStateEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/dto/RiskEvaluateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/dto/RiskEvaluateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/dto/common" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/ml/MlClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/ml/dto/MlPredictRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/ml/dto/MlPredictResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/repo/LineConfigRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/repo/MomEventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/repo/MomTaskRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/repo/PredictionLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/repo/RiskStateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/service/EventQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/service/PredictionLogQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/service/RiskOrchestratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/service/RiskStateQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/service/TaskQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/util/IdUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mom/util/TimeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "last_opened_file_path": "C:/Users/edvazat/PycharmProjects/mon-ML Service",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
